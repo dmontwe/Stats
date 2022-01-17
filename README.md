@@ -1,7 +1,7 @@
 # Stats
 Collection of tutorials &amp; examples in R
 
-
+[Link](https://github.com/dmontwe/Stats/blob/main/Z-Scores.html)
 
 
 
