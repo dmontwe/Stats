@@ -2,5 +2,5 @@
 
 #Stats
 
-1. [Z-scores]https://github.com/dmontwe/Stats/edit/gh-pages/Z-Scores.Rmd
+1. [Z-scores]https://github.com/dmontwe/Stats/edit/gh-pages/Z-Scores.html
 
