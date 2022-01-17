@@ -1,0 +1,49 @@
+---
+title: How to normalize data with Z-scores
+   
+output: html_document
+---
+
+```{r setup, include=F}
+# Settings and packages
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+The most important application of z-scores is in inferential statistics, allowing to calculate p-values for differences between population means(z-test) and sample means (t-test & ANOVA). Displaying data as units of standard deviations can also make visual comparisons across different scales of data possible (e.g. precipitation in $mm$ and temperature in $^\circ{C}$).
+
+### Equation to calculate z-scores for samples
+
+\begin{align}
+\label{eq:Q1}
+z_i = \frac{x_i-\bar{x}}{{S}}
+\end{align}
+
+Where:  
+$x_i$ is the value of sample $i$\
+$\bar{x}$ is the arithmetic mean of the sample\
+$S$ is the standard deviation of the sample
+
+### Example in R based on the `iris` data set.
+
+```{r Example}
+#Load example data 
+data_iris = iris$Sepal.Length[iris$Species=='virginica']
+
+# A vector with 50 numeric values
+str(data_iris)
+
+# Manual calculation of z-scores (see equation above)
+Z_scores_m = (data_iris - mean(data_iris))/sd(data_iris)
+str(Z_scores_m)
+
+# Using the scale() function - default arguments are:  center = TRUE, scale = TRUE
+Z_scores_sc = scale(data_iris)
+str(Z_scores_m)
+
+#Difference of 0
+mean(Z_scores_m -Z_scores_sc)
+
+```
+
+  
