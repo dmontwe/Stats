@@ -1,7 +1,11 @@
-## Welcome to this GitHub Page
+---
+title: Tutorials and Examples for Statistics with R
+   
+output: html_document
+---
 
-#Stats
+##Content
 
 1. [Z-scores](https://github.com/dmontwe/Stats/gh-pages/Z-Scores.html)
-2. [a relative link](Z-Scores.md)
+2. [a relative link](Z-Scores.html)
 
