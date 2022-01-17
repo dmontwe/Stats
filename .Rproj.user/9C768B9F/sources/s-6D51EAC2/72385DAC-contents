@@ -14,10 +14,10 @@ The most important application of z-scores is in inferential statistics, allowin
 
 ### Equation to calculate z-scores for samples
 
-\begin{align}
+\begin{multline*}
 \label{eq:Q1}
-z_i = \frac{x_i-\bar{x}}{{S}}
-\end{align}
+z_i = \frac{x_i-\bar{x}}{{S}} 
+\end{multline*}
 
 Where:  
 $x_i$ is the value of sample $i$\

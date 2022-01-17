@@ -1,0 +1,1284 @@
+---
+title: Swiss needle cast tolerance in British Columbia's coastal Douglas-fir breeding population
+geometry: margin=2.5cm
+author:
+  - name: David Montwé
+    email: davidmontwe@uvic.ca
+    affiliation: Centre for Forest Biology
+    footnote: Corresponding Author
+  - name: Bryan Elder
+    affiliation: Centre for Forest Biology
+  - name: Peter Socha
+    affiliation: Centre for Forest Biology
+  - name: Jessica Wyatt
+    affiliation: Centre for Forest Biology
+  - name: David Noshad
+    affiliation: Centre for Forest Biology    
+  - name: Nicolas Feau
+    affiliation: UBC   
+  - name: Richard Hamelin
+    affiliation: UBC   
+  - name: Michael Stoehr
+    affiliation: British Columbia Ministry of Forests
+  - name: Jürgen Ehlting
+    affiliation: Centre for Forest Biology
+address:
+  - code: Centre for Forest Biology
+    address: University of Victoria, Centre for Forest Biology, PO Box 1700 STN CSC, Victoria, BC, V8W2Y2, Canada
+  - code: UBC
+    address: University of British Columbia, Department of Forest and Conservation Sciences, 2424 Main Mall, Vancouver, BC, V6T1Z4, Canada
+  - code: British Columbia Ministry of Forests
+    address: British Columbia Ministry of Forests, Lands and Natural Resource Operations and Rural Development, Tree Improvement Branch, PO Box 9518 Stn Prov Govt, Victoria BC, V8W9C2, Canada
+
+keywords: Resistance breeding, *Nothophaeocryptopus gaeumannii*, *Pseudotsuga menziesii*, early testing, climate change, forest genetics
+ 
+
+journal: ""
+date: "`r Sys.Date()`"
+bibliography: mybibfile.bib
+csl: elsevier-harvard.csl
+#linenumbers: true
+#numbersections: true
+
+header-includes: #allows you to add in your own Latex packages
+-  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+- \usepackage{float} #use the 'float' package
+#- \usepackage{lineno} # use this package to include line numbers
+- \floatplacement{figure}{H}
+- \usepackage{lscape}
+#- \linenumbers # enable line numbers here
+- \usepackage{setspace} # This line creates double spaces
+- \doublespacing # This line creates double spaces
+- \pagenumbering{gobble}
+output:
+  bookdown::pdf_book:
+      #citation_package: natbib
+      base_format: rticles::elsevier_article
+
+#biblio-style: plain
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.pos= "h")
+```
+
+Substantial growth losses in Douglas-fir can the result of Swiss needle cast, a foliar disease caused by the fungus *Nothophaeocryptopus gaeumannii*. Although the disease is native to western North America, it is expected to become increasingly problematic in regions where climates become warmer in winter and wetter in spring, such as in coastal British Columbia, Canada. Previous research suggests that tolerance to this disease is under partial genetic control. We therefore aim to screen for tolerance and resistance to the disease in the tree breeding population of coastal Douglas-fir (*Pseudotsuga menziesii* var. *menziesii*) in British Columbia. We evaluate if early screening for disease signs is possible. We work with 32 families grown for 18-years on two full-sib genetic field trial sites representing different climates. We assessed over 900 trees for disease signs and symptoms from 2017 to 2019. Needle retention was assessed in the field. In the laboratory, stomatal occlusion was measured, DNA was extracted, and the proportion of fungal DNA in the needles was assessed using quantitative polymerase chain reaction (qPCR). Strong differences were found among families for needle retention, stomatal occlusion and fungal load. The milder and wetter site closer to the coast was generally more severely affected. Families showed rank changes between the two sites for all response variables. Higher needle retention was correlated with increased tree volume. No correlation was found between stomata occlusion, fungal load, and needle retention. These results indicate that a more complex pathology is involved in causing needle loss. We conclude that screening for Swiss needle cast tolerance in the coastal British Columbia Douglas-fir breeding population is possible if needle retention can be assessed, and that area-specific deployment strategies may be needed given family rank changes in different environments.
+
+
+
+Introduction
+==========================
+
+
+Douglas-fir (*Pseudotsuga menziesii*) is an ecologically and economically important conifer species in its native range in western North America as well as around the world, where it has been introduced due to its high productivity and wood quality [@Isaac-Renton2014; @Hermann1999]. In Canada’s western-most province of British Columbia, coastal Douglas-fir (*P. menziesii* var. *menziesii*) contributes significantly to the economy [@Curtis1996]. Further highlighting its value as a timber species, coastal Douglas-fir was the first tree species for which a genetic evaluation and selection program was developed in this province. Selection of superior phenotypes began in the 1950’s while recurrent selection has been occurring since the 1980’s for volume gain as the primary trait and wood quality as a secondary trait [@Stoehr2010]. This tree breeding program is now producing between 20% to 30% gain in volume relative to wild-stand controls by a rotation age of 60 years [@Isaac-Renton2020]. These gains, however, and the significant investments that they represent, may be compromised by diseases that are expected to become more prevalent under climate change [@Woods2010].
+
+There is increasing concern that climate change may influence tree insect pests and pathogens [@Weed2013]. One such disease is Swiss needle cast [@Lee2017]. This disease causes a reduction in foliage mass, decreasing the photosynthesizing surface area of the tree crown [@Weiskittel2006]. It has reached an epidemic state in Oregon [@Ritokova2016]. Heavily affected stands of Douglas-fir can have losses in volume growth of 52% on average [@Maguire2002]. Due to these issues, foresters are questioning reforestation with Douglas-fir in high-risk areas, instead opting to regenerate harvested stands with economically less desirable tree species [@Ritokova2016]. 
+
+Swiss needle cast is caused by the fungal pathogen *Nothophaeocryptopus gaeumannii* [@Stone2008]. While the pathogen is endemic in western North America, it is also found in all parts of the world where Douglas-fir has been introduced [e.g. @Gaumann1930; @Hood1975; @Temel2003]. The ascomycete pathogen affects trees through a unique life cycle: After bud break, newly formed needles are infected with ascospores during May and June [@Stone2008]. The ascospores germinate and the fungus grows within the inter-cellular space of the needles, without causing apparent needle symptoms, behaving more like an endophyte than a pathogen. However, 3 to 9 months after initial needle infection, stomatal openings begin to be blocked by fungal fruiting bodies, known as pseudothecia [@Stone2008]. These pseudothecia are a visual sign of the disease and physically block gas exchange of the needles, leading to reduced carbon assimilation [@Hood1977; @Manter2000]. @Manter2000 showed that a blockage of 58% of stomata causes needle chlorosis and abscission. This in turn leads to reduced potential for photosynthesis and reduced tree growth.
+
+The occurrence of Swiss needle cast throughout coastal and interior British Columbia (BC) and northern Washington state was previously assessed by @Hood1982. They found signs of the disease (pseudothecia) to be prevalent on Vancouver Island, the mainland coast, as well as in the eastern mountain ranges of BC. Douglas-fir on the interior plateau was not strongly affected. Areas of lower prevalence were delineated by precipitation in May to July of less than 110 mm [@Hood1982]. @Bennett2019 found different lineages of Swiss needle cast to be associated with different climate conditions. In addition to precipitation, Swiss needle cast abundance is strongly correlated with leaf wetness [@Manter2005], but low temperatures may limit growth of the fungus through the needles [@Manter2005; @Stone2008]. Further supporting this finding, winter temperatures were found to be important factors limiting the distribution of Swiss needle cast in New Zealand [@Kimberley2011; @Stone2007]. At the same time, high temperatures in summer (over 30$^\circ$C) may also limit the spread of the disease [@Manter2005]. Accordingly, the future severity of the disease may depend on how climate change manifests in coastal BC. However, increases in winter temperatures in coastal regions have already been observed and additional warming is projected [@Wang2016]. This may therefore increase Swiss needle cast prevalence and associated negative impacts in this region. 
+
+In addition to climatic factors, there are genetic differences in Douglas-fir susceptibility to Swiss needle cast. When experimentally tested, different Douglas-fir provenances show variation in susceptibility to the disease [@Hood1982; @Hood2005; @McDermott1989; @Wilhelmi2017; @Marks1975]. These common garden experiments show that provenances from wetter locations are less susceptible than provenances from drier locations, [@Hood1982; @Wilhelmi2017], suggesting co-evolution of Douglas-fir and Swiss needle cast in areas more prone to the disease [@McDermott1989]. Similarly, distance to the ocean was found to be a major determining factor for susceptibility of provenances to Swiss needle cast [@Wilhelmi2017]. Therefore, it appears that there is genetic variability in disease tolerance across the species range.
+Tolerance to Swiss needle cast (as expressed as needle retention, crown density and foliage color) has also been found to be a heritable trait [@Johnson2002; @Temel2005], and is of low to moderate heritability [@Dungey2012; @Jayawickrama2012; @Johnson2002; @Temel2005]. Similarly, the proportion of occluded stomata showed low heritability [@Temel2005]. 
+
+In this study, we follow the definition of resistance and tolerance as outlined by @Temel2004. These two terms relate to the signs and symptoms of the disease. Stomata occlusion, for example, is a sign of the disease, while low needle retention is a symptom. Hence, a resistant tree expresses fewer signs of Swiss needle cast (i.e. fungal load, stomata occlusion), while a tolerant tree expresses fewer symptoms (i.e. lower needle retention regardless of stomata occlusion or fungal load). Given the variability and heritability of tolerance and resistance traits, tree breeding may be a promising route for managing disease risks in forest stands [@Graham2018]. Further, understanding potential trade-offs between productivity and Swiss needle cast tolerance is important for the coastal Douglas-fir tree breeding program. Should negative correlations exist, separate breeding populations may need to be established for producing seedlots suitable for deployment in high-risk areas. 
+
+Here, we screen a part of the coastal Douglas-fir breeding population of BC for Swiss needle cast tolerance and resistance. The aim is to inform potential deployment strategies for areas considered to be high-risk for increased disease prevalence. This involves four specific objectives. First, we evaluate the variability of families in needle retention, stomatal occlusion and fungal load. Second, we assess rank changes of families on the two sites for these three disease variables to evaluate the need for unique deployment strategies. Third, we explore the nature of resistance and tolerance through correlations among tree size, disease signs and symptoms. This will allow us to identify if early testing for disease signs can predict tolerance. Fourth, we relate tree size metrics with needle retention to evaluate potential trade-offs with productivity and disease tolerance. 
+
+
+
+
+Material and Methods
+==========================
+
+## Experimental design
+Two experimental sites are included in this study: Jordan River and North Arm. Both sites are located on Vancouver Island, BC (Figure \@ref(fig:F1)). Jordan River is located in the fog belt of the west coast, closer to the ocean, while the North Arm site is located close to Lake Cowichan, in south-central Vancouver Island (Figure \@ref(fig:F1)a). Although both sites are classified as occurring in the very dry maritime sub-zone of the Coastal Western Hemlock bio-climatic zone, Jordan River is on the border with a wetter subzone. Therefore, some important climatic differences exist between the two sites. For example, Jordan River has slightly higher precipitation than North Arm, and the two sites differ in precipitation during the critical months between April and July. Since Jordan River is closer to the ocean, it is characterized by milder temperature conditions, with a mean coldest month temperature of 3.9$^\circ$C. The North Arm site is further inland from the ocean and experiences relatively colder winters, with a mean coldest month temperature of 1.9$^\circ$C. Consequently, Jordan River has substantially warmer winters and cooler summers than North Arm (Figure \@ref(fig:F1)b). Jordan River was therefore selected to represent a high risk area, while the North Arm was selected to represent drier and colder conditions, and hence, a scenario representing a lower level of disease challenge. The experimental sites were established in 2003 with 81 families planted in $5\times5$ tree family plots [@Cappa2016]. These 25-tree plots were planted at a $1.5\times1.5$m spacing at North Arm and a $2\times2$m spacing at Jordan River. 
+
+## Field measurements and sample collection
+
+Field measurements were completed in June in 2017, 2018 and 2019. We collected needle samples on a subset of 32 families, with 15 trees per family. In 2017, the full set of 32 families was sampled on both sites. In 2018, a subset of 22 families was sampled on the Jordan River site, and in 2019, those 22 families were sampled again on both sites. Since trees were almost 20 years old and approximately 15m in height, we used ladders and pole pruners to harvest a north-facing branch from the mid-crown of each tree. Selecting branches in the mid-crown is important to reduce shading effects from the canopy above, which could reduce needle retention independent of Swiss needle cast. On the ground, the harvested branch was evaluated for needle retention. The proportion of retained needles was scored on a scale of 0 to 9 for needles that were 1-year old, as well as needles that were 2- and 3-years old. The scale of 0 means 0 to 10% of needles were retained whereas 9 means 90 to 100% of needles were retained. From these branches, several 2-year-old inter-nodes where collected in plastic bags, labeled, brought to the laboratory, and stored in a -20$^\circ$C freezer for subsequent stomata occlusion and fungal load measurements.
+
+## Stomata occlusion measurements
+In the laboratory, ten 2-year-old needles per tree were randomly selected and mounted on a glass slide, with the underside facing up to facilitate counting of occluded stomata under a dissecting microscope. The number of occluded stomata was counted within a 2.5mm segment on each needle across the outermost four complete rows of stomata in each of the two stomatal bands. An average number of 425 stomata for these 8, 2.5mm long rows was used to calculate the proportion of occluded stomata on each needle. Results for individual needles where averaged to obtain a mean occlusion rate for each tree.
+
+## DNA extraction
+DNA extraction of needle samples was done using a modified CTAB protocol [@Doyle1987]. Samples were kept on ice in between procedural steps. For each sample, about twenty 2-year-old needles were ground in liquid nitrogen using a mortar and pestle. About 50-60mg of fine powder was placed in a 2ml screw cap tube and two tungsten beads were added. Autoclaved CTAB extraction buffer (50ml of 1M Tris-HCL (pH: 8.0), 10g of PVP-40, 175ml of 4M Sodium Chloride, 20ml of 0.5M Disodium Salt EDTA, 20g of CTAB, 5g of PVPP, 50$\mu$l of RNase A and dH$_2$O to 500ml) was  mixed with a phenolic compound extraction powder (1mM Aurintricarboxylic acid, 10mM Dithiothreitol, 5mM Thiourea, 0.02g/ml PVPP and 0.001g/ml activated charcoal) at 0.8mg/ml of CTAB buffer. One ml of pre-warmed (65$^\circ$C) CTAB/Phenolic compound inhibitor was added to each tube and then bead beat twice for 45 seconds to homogenize the sample. Incubation at 65$^\circ$C for 15 minutes followed. Next, 1ml of 24:1 chloroform isoamyl alcohol was added and centrifuged for 2 minutes at 12,000 rpm. The aqueous layer was extracted and two more 1ml chloroform treatments were performed. Following these, 1ml of -20$^\circ$C isopropanol was added and centrifuged at 12,000rpm for 30 minutes to precipitate the DNA. Supernatant was discarded and 1ml of wash buffer (76% Ethanol and 10mM Ammonium acetate) was added followed by centrifugation at 12,000rpm for 10 minutes. Supernatant was again discarded and the tubes were air-dried for 10 minutes at the back of a flow-hood. The DNA pellet was re-suspended with 150$\mu$l of TER buffer (10mM Tris-HCl pH 7.4, 1 mM EDTA and RNase 5$\mu$l (100mg/ml)) and incubated at 37$^\circ$C for 30 minutes. Samples were then stored at -20$^\circ$C until further use.
+
+The quality and amount of DNA was assessed spectrophotometrically using a NanoDrop2000 instrument (Fisher Scientific). TER buffer was used as a blank and 1$\mu$l was used to determine the DNA concentration. The samples were then loaded onto a 1% Sodium Borate agarose gel and underwent electrophoresis at 300 volts for 10 minutes. One of the gel wells consisted of 6$\mu$l of 1 Kb DNA ladder, while the others consisted of 6$\mu$l of DNA and 3$\mu$l of loading dye. The gels were imaged using a UV imager. Here, the quality of the DNA was assessed by visual inspection of the DNA bands. 
+
+## Fungal load determination using quantitative Polymerase Chain Reaction (qPCR)
+To estimate the proportion of Swiss needle cast biomass in the needle, we used quantitative polymerase chain reaction (qPCR). The DNA of all samples was diluted to $100ng/\mu$l. Primers and probes for *P. menziesii* and *N. gaeumanii* were selected following @Winton2002. For *P. menziesii*, the primer/probe set targeted the *LEAFY* gene, and for *N. gaeumanii*, the $\beta$-*TUBULIN* gene was targeted. We used the PrimerBlast function of the National Center for Biotechnology Information (NCBI) to ensure specificity. The blast of the probe sequence developed by @Winton2002 against the *LEAFY* gene for Douglas-fir suggested the correction of one base pair (Table \@ref(tab:ST1)). A $20\mu$l reaction mix was prepared with the Luna qPCR Master Mix (New England BioLabs Inc.) and run on 96 well plates on a BioRad C1000 Thermal Cycler qPCR machine. Each reaction consisted of 10$\mu$l Luna qPCR Master Mix, 1.6$\mu$l of forward/reverse primers and 0.4$\mu$l of probes for each of the targets, 4$\mu$l of template DNA and 2$\mu$l of nuclease-free water. Standards with known amounts of DNA were included on each 96-well-plate, ranging from 2000  to $1.95ng/\mu$l for *P. menziesii* and 20 to $0.0195 ng/\mu$l for *N. gaeumanii*. The cycle steps for the qPCR were 60 seconds of initial denaturation at 95$^\circ$C, denaturation at 95$^\circ$C for 15 seconds and extension/annealing at 60$^\circ$C for 30 seconds, followed by a plate read. This was done for 40 cycles. The threshold cycle numbers were recorded for both *P. menziesii* and *N. gaeumanii* for each sample, and converted to ng/$\mu$l using the regression equation between the second logarithm of the DNA amount and the threshold cycle of the standards. Finally, the amount of Douglas-fir DNA was divided by the amount of Swiss needle cast DNA in each sample, resulting in the proportion of Swiss needle cast DNA for each sample. 
+
+
+## Statistical analyses
+
+
+To test for differences among sites and families, and to account for spatial dependence of trees planted in unreplicated family plots within sites, we conducted the following spatial fixed effects model, which was implemented with Asreml R-4 [@Butler2017]:
+
+\begin{align}
+\label{eq:Q1}
+\boldsymbol{y}=\boldsymbol{1\mu}+\boldsymbol{X_{1}s}+\boldsymbol{X_{2}f}+\boldsymbol{X_{3}sf}+\boldsymbol{e}
+\end{align}
+
+where $\boldsymbol{y}$ represents the vector of observations for individual trees for each trait; $\boldsymbol{1}$ is a vector of ones; $\boldsymbol{\mu}$ is the overall mean; the letter $\boldsymbol{X}$ represents incidence matrices for fixed effects; $\boldsymbol{s}$ is the vector of the fixed site effect; $\boldsymbol{f}$ is the vector of the fixed family effect; $\boldsymbol{sf}$ is the vector of the fixed interaction effect between site and family; $\boldsymbol{e}$ represents a vector of errors, with $\boldsymbol{e} \sim N(\boldsymbol{0}, \oplus ^2_{i=1} \boldsymbol{R}_i)$; $\oplus$ is the direct sum of matrices; $\boldsymbol{R}_i$ is a residual matrix formed by the Kronecker product ($\otimes$) between row-within-site ($x$) and column-within-site ($y$): $\boldsymbol{R}_i= AR_{x}(i)\otimes AR_{y}(i)$. Significance of fixed effects were tested using conditional F-tests with Asreml R4.
+
+We note that our design was not intended to obtain heritability estimates and genetic correlation because the family term is confounded with the plot term, i.e., trees are planted in single-family, unreplicated plots per site [@Cappa2016]. Therefore, we do not report heritability or genetic correlations for the assessed traits. 
+
+Results
+==========================
+##Needle retention, stomata occlusion, fungal loads by family and site
+
+High variability among families and sites exist for volume, needle retention, stomatal occlusion and fungal load (Figure \@ref(fig:F2)). The milder, coastal site of Jordan River shows higher volume, higher stomata occlusion and fungal loads as well as lower needle retention (Figure \@ref(fig:F2)). F-tests for fixed effects indicate significance effects of site, family, and their interaction for all of the assessed traits (Table \@ref(tab:T1)). Variation among families across traits is not consistent: Families showing high resistance do not necessarily show high tolerance (Figure \@ref(fig:F2)). Volume is generally higher on the Jordan River site, which may be both related to wider initial spacing density at this site as well as milder and wetter climate.
+
+##	Family-by-environment: Trait stability
+Strong family-by-environment interactions exist for tree size, tolerance and resistance traits (Figure \@ref(fig:F2a)). Correlations of traits across sites were low and non-significant, indicating substantial genotype-by-environment effects (Figure \@ref(fig:F2a)). These strong genotype-by-environment interactions are also highlighted in Figure \@ref(fig:F3). To further illustrate, family 308 is among the top performers in volume at Jordan River but shows the least volume at the North Arm site (Figure \@ref(fig:F3)b).
+
+##	Trade-offs between tree size, disease resistance and disease tolerance
+Families on the North Arm site showed similar trade-offs, while there is more variability on the Jordan River site (Figure \@ref(fig:F3)a). Several families, such as family 349, move from the 'tolerant and resistant' quadrant to non-tolerant quadrants (Figure \@ref(fig:F3)a).  In While volume is generally higher at Jordan River, some families (e.g. family 349 and 318, Figure \@ref(fig:F3)b) do not show this positive growth response, and these families mostly have lower needle retention as well. The tree breeding population shows variability in trade-offs between tree volume and Swiss needle cast tolerance, as measured by needle retention. There is a relatively even distribution of families among four quadrants representing different combinations of low to high volume and low to high tolerance (Figure \@ref(fig:F3)b). There are several families that were relatively productive yet subsequently experienced low needle retention.
+
+## Correlations among traits
+No clear correlations were found among disease signs (stomata occlusion and fungal load) and symptoms (needle retention). The only significant relationship was found between stomata occlusion and fungal load in 2017 at the North Arm site (Table \@ref(tab:T2)). Needle retention was correlated with itself across sampling years. However, no significant correlation was found between stomata occlusion across different years. Generally, needle retention  was strongly and positively correlated with tree size traits (Table \@ref(tab:T2)): Higher needle retention is associated with greater growth at selection age. However, this trend is reversed at the North Arm site for 2019. Positive correlations among growth traits were strong at both sites.
+
+##	Needle retention across sites and years
+In each sampling year, needle retention decreases with needle age (Figure \@ref(fig:F4)). However, 2017' sampling indicated that this decreasing trend is stronger at Jordan River, i.e., there is a steeper decline of needle retention in the 2 and 3 year old needles on this site than at North Arm. Needle loss rates of about 14% and 5% per were observed at Jordan River and North Arm, respectively. The lower needle retention at Jordan River might be attributed to the higher disease load at this site. Across sampling years, a comparison of needle retention of 1-year-old needles shows that needle retention was highest in 2017, and then gradually decreased in the sampling years of 2018 and 2019. This trend was observed on both sites, although needle retention was not assessed at North Arm in 2018. For the sampling year of 2019, the decrease in needle retention was stronger than in 2017 at both sites (Figure \@ref(fig:F4)). In contrast to 2017, this effect is stronger at the North Arm site. For the sampling year of 2019, the rate of needle loss at Jordan River averaged 17% and 24% at North Arm. 
+
+
+Discussion
+==========================
+
+## 	Breeding coastal Douglas-fir for tolerance and productivity 
+The high variability of Douglas-fir families in Swiss needle cast tolerance, as measured by needle retention in 2017, indicates that this trait can be controlled through breeding. Because needle retention was found to be generally positively correlated with height, diameter and volume (Table \@ref(tab:T2)), there may be no negative trade-off between productivity and Swiss needle cast tolerance. Currently, the coastal Douglas-fir breeding program of British Columbia selects for height at age 12 to improve volume gain at a rotation age of 60. Based on the correlations observed in this study, selecting for tree size should also retain genotypes with high needle retention, and hence, with high tolerance to Swiss needle cast. However, this is assuming that tree genotypes are tested under high disease loads. It is conceivable that disease tolerance in the breeding population may have generally increased through recurrent selection occurring since the mid 1980’s. However, a few families were found to have had good growth at age 10 (in 2012) but low needle retention in 2017 (Figure \@ref(fig:F3)b), which puts future, long-term productivity of these families into question.
+
+One of the main results of this study is the absence of a productivity versus disease tolerance trade-off. However, this result differs from the findings of @Johnson2002, who found inconsistent genetic correlations between needle retention and height and diameter across multiple sites in open-pollinated progeny trial in Oregon. The strong positive correlations between tree size and tolerance found in our study may be due to differing parent material. The mechanism behind the favorable association between tree size and tolerance found here remains unclear. It could be that the most vigorous trees are inherently better suited for tolerating the disease, allowing them to retain their needles or vice-versa. Regardless, the association works in the favor of tree breeding in terms of tolerance: Selecting for trees with good volume growth under disease pressure is associated with a better ability to cope with Swiss needle cast. 
+
+## Deployment strategies
+
+The genetic basis underlying the response of Douglas-fir to Swiss needle cast means that care must be taken when deploying seedlings on the landscape. @Ritokova2016 suggested that planting Douglas-fir on sites that are more suited to Sitka spruce and mountain hemlock may trigger Swiss needle cast epidemics. Together with seed transfers from inland toward the coast, this may have exposed non-adapted genetic material to high disease loads, resulting in the significant decline of Douglas-fir in coastal Oregon [@Ritokova2016]. The results from our study indicate that tolerance to the disease exists within the breeding population of coastal BC. The two experimental sites, however, showed very different disease responses. The strong genotype-by-environment interactions indicate that Swiss needle cast tolerance is an important trait determining the success of Douglas-fir forestry on mild and wet sites such as Jordan River. Families that showed lower needle retention on this site should not be planted on sites with similar climate. Interestingly, the incidence of Swiss needle cast at the North Arm site seems to be linked both to warmer and drier summers, as well as to colder winters occurring at this location.
+
+## Low correlation of stomata occlusion and needle retention: Implications for early screening
+  The lack of correlation between stomata occlusion and fungal load and needle retention in this study point to a complex relationship between *N. gaeumannii* and coastal Douglas-fir. A wide range of correlations between these traits are reported in the literature. For example, strong correlations between these traits are reported by @Manter2003. Most of the studies reporting high correlations were done on natural stands that were targeted for sampling due to heavy infection [e.g @Hansen2000; @Manter2003; @Maguire2002; @Hood1977]. Studies reporting low or non-significant correlations [e.g. @Temel2004], often report on genetic material from progeny trials. By studying trees from a breeding population that may be one or two generations away from wild-stand counterparts, it may not be possible to capture the full range of extreme responses to the disease. Breeding populations are a specialized sub-sample that may be pre-adapted to Swiss needle cast. Parents or provenances with multiple adaptations conferring either tolerance or resistance to Swiss needle cast may have already been indirectly selected. In this study, we found families with high occurrence of signs of the disease that did not express equally high symptom severity.  This could be related to co-evolution of Swiss needle cast and Douglas-fir in high-severity environments, where Douglas-fir may have evolved to tolerate a higher Swiss needle cast load as represented by higher stomata occlusion. In terms of tree breeding, this may suggest that low resistance (higher occurrence of signs) might be acceptable as long as it is associated with higher tolerance (lower severity of symptoms). Measurements of stomata occlusion and fungal DNA load in the needles can be conducted with limited effort on seedlings, potentially offering the opportunity to shorten breeding circles for Swiss needle cast tolerance. Our results, however, indicate that these measures of resistance do not necessarily predict tolerance in 18-year-old Douglas-fir trees. However, our experiment can not fully resolve this question, because needle retention was not assessed on young trees. Therefore, it may be useful to assess needle retention at selection age.
+
+
+## Shading in the 2019 sampling year at the North Arm site
+
+The negative correlations of needle retention and height, diameter, and volume at the North Arm site for the 2019 sampling year were unexpected. This may be a function of stand development and shading affecting needle retention in 2019 because our sampling height was logistically limited to about 9 - 10 m. In 2019, the ladders and pole pruners could not always access branches in parts of the crown that were still exposed to light at the North Arm site. Because the Jordan River site was established at wider spacing on a south-facing slope, light could reach lower into the crown. Therefore, Jordan River was not be affected by sample collection limits in 2019. Therefore, it seems reasonable to avoid interpretation of correlations at the North Arm site for the sampling year of 2019. 
+
+## Conclusions
+With changing precipitation patterns and increasing winter temperatures under climate change, Swiss needle cast may become more prevalent in areas where Douglas-fir has not co-evolved with this fungus. It does not seem unlikely that climates linked to the disease epidemic in Oregon could materialize in British Columbia in coming decades. The currently most effective approach to dealing with high disease occurrence is the appropriate selection of genotypes for reforestation. Favorable correlations among tree size and disease tolerance, combined with high variability of families across different environments, suggest that screening the tree breeding population does enable area-specific deployment strategies. Deployment of planting stock genetically selected for Swiss needle cast tolerance is a feasible way to increase resilience of coastal Douglas-fir forests to climate change in British Columbia. Since Douglas-fir breeding programs exist around the world, (re-)evaluating these tree breeding populations for increased disease tolerance may be a suitable climate change adaptation technique for several regions around the globe.
+\newline
+
+***Funding***
+
+This work was supported by CoAdapTree (Genome Canada project 241REF) funded by Genome Canada, Genome BC, Genome Alberta, Genome Quebec and the British Columbia Ministry of Forests, Lands and Natural Resource Operations and Rural Development and other sponsors listed under https://coadaptree.forestry.ubc.ca/sponsors.
+
+***Acknowledgements***
+
+We are grateful for and field and lab support by Juan Aldana, Paul de la Bastide, Brad Binges, Keith Bird, Kennedy Boateng, Yuriko Carrington, Andrew Coster, Fleur Fenija, Terrie Finston, Kelsey Franklin, Harley Gordon, Jacqui Irvine, Sarah Keshvani, Sarah Lane, Carmen Lea, Cuong Le, Eerik Piirtola, and Lan Tran. We thank Patrick von Aderkas for equipment and lab space, Salvador Gezan for advice on the statistical analysis and Alvin Yanchuk, Sally Aitken and Miriam Isaac-Renton for discussions. 
+\newline
+
+***Author contributions***
+
+MS and JE conceptualized the study idea and developed the experimental design. DN provided training and advice on sampling protocols. JE and JW organized and oversaw field campaigns in 2017 and 2018, and guided stomata occlusion data collection in 2017. Based on these established protocols, JE and DM led the 2019 field campaign. BE conducted a pilot study, BE, JW, and PS conducted DNA extractions and developed/updated laboratory protocols. BE described DNA extraction methods. NF and RH provided training in qPCR and primers and probes for testing. DM led qPCR work in the laboratory, compiled data, completed statistical analyses and prepared the manuscript. All co-authors reviewed the manuscript.
+\newline
+
+***Conflict of interest statement***
+
+None declared.
+
+\newpage
+
+
+**References**
+<div id="refs"></div> 
+
+\newpage
+
+Table and Figure captions
+==========================
+
+**Table 1**: P-values of F-Tests for fixed effects calculated with conditional sum of squares. H12 refers to height in 2012 (age 10); D12 refers to diameter in 2012; V12 refers to volume per tree in 2012; FL17 refers to fungal load in the needles in 2017 (age 15); SO17 and SO18 refers to percent of stomata occlusion in 2017 and 2018, respectively; NR17, NR18 and NR19 refer to needle retention in 2017, 2018 and 2019. In 2018, stomata occlusion and needle retention were only assessed on the Jordan River site, hence, no site effect was evaluated for this year. In 2018 and 2019, a sub-set of 22 families was sampled. The site effect is confounded by different initial spacing density at the two sites. Both sites are part of a 18-year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada. 
+\newline
+
+**Table 2**: Family mean correlations for Jordan River (lower triangle) and North Arm (upper triangle) among growth and variables representing tolerance or resistance to Swiss needle cast in a 18-year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada. Bold font indicates significance of the correlation. Not assessed combinations are indicated by a dash. SO refers to stomata occlusion, NR refers to needle retention, FL refers to fungal load as assessed through quantitative polymerase chain reaction (qPCR). Jordan River is milder and wetter while North Arm is cooler and drier.
+\newline
+
+**Figure 1**: Location and climate of the two experimental sites on Vancouver Island, British Columbia, Canada, as shown in panel a. The two sites represent a full-sib trial established in 2003 for coastal Douglas-fir. The site Jordan River is indicated in blue, and the site North Arm is indicated in green. Panel b shows the average climate during the period of 1980 to 2010, the long-term average that best represents the conditions under which the trees were grown. The bars indicate monthly precipitation in millimeters (left axis). The lines indicate monthly temperature in $^\circ$C (right axis). Data was interpolated using the software ClimateBC.
+\newline
+
+
+**Figure 2**: Four measures of Douglas-fir growth as well as tolerance and resistance to Swiss needle cast. Each bar represents the family mean of tree volume (panel a), needle retention (panel b), stomata occlusion (panel c) and fungal load (panel d) by experimental site. Error bars indicate the standard error of the mean. Jordan River is the milder, wetter site and North Arm is the cooler drier site. The horizontal dashed red lines show the site averages.
+\newline
+
+**Figure 3**: Mean performance of 32 Douglas-fir families across the two experimental sites for tree volume at age 10, fungal load at age 15, stomata occlusion at age 15, and needle retention of three-year-old needles at age 15 (2017) and at age 17 (2019). Crossing lines indicate rank changes of families across the two sites. Jordan River is the milder, wetter site and North Arm is the cooler drier site. Both sites are part of a 18-year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.
+\newline
+
+**Figure 4**: Trade-offs among tree volume at age 10 (2012) as well as tolerance and resistance to Swiss needle cast. Panel a shows a scatter plot of family means for Swiss needle cast tolerance (as expressed by needle retention in 2017), and resistance (as expressed by fungal load in 2017). Blue dots indicate the family means for the Jordan River site, while green dots indicate family means for the North Arm site. The dashed red horizontal and vertical lines separate the scatter into quadrants from low to high resistance and from low to high tolerance. Panel b shows a scatter plot of family means for Swiss needle cast tolerance and productivity (as expressed by tree volume). Here, the dashed red lines separate the scatter into quadrants from high to low tolerance and from low to high productivity. Tolerance and resistance to Swiss needle cast was assessed on two sites in a full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.
+\newline
+
+**Figure 5**: Average needle retention by site for sampling dates of 2017, 2018 and 2019. The milder, wetter site of Jordan River is indicated in blue, and the cooler, drier site of North Arm is indicated in green. Needle retention was not assessed at North Arm in 2018. Error bars indicate the standard error of the mean. In 2017 and 2018, up to 3-year-old branch internodes were scored for needle retention. In 2019, up to 4-year-old internodes were scored. The assessment was conducted in June of each year, and while the current year's flush was already developing, it was not assessed. Needle retention is considered a tolerance trait to Swiss needle cast. All data was obtained from a 18 year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.
+
+
+
+\newpage
+
+
+
+Tables
+==========
+
+
+```{r T1, message = FALSE,echo=F}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+
+dat = read.csv(paste(getwd(),"/Results/ANOVA.csv",sep=""))
+#dat = read.csv(paste(getwd(),"/Results/gc_matrix.csv",sep=""))
+dat2 = dat[dat$var=="vol12_10yr"|
+             dat$var=="d12_10yr"|
+             dat$var=="ht12_10yr"|
+             dat$var=="d18_16yr"|
+             dat$var=="NR_3yr_2017"|
+             dat$var=="NR_3yr_2018"|
+             dat$var=="NR_3yr_2019"|
+             dat$var=="SO_mean_2017"|
+             dat$var=="SO_mean_2018"|
+             dat$var=="Prop_NG",]
+dat2 = dat2[dat2$Effect != "(Intercept)",]
+#cbind(1:length(colnames(dat)),colnames(dat))
+#cbind(1:length(rownames(dat)),rownames(dat))
+
+dat2 = dat2[,c(1,2,8)]
+
+
+#dat2$Sum.of.Sq = round(dat2$Sum.of.Sq,digits=2)
+#dat2$Wald.statistic = round(dat2$Wald.statistic,digits=2)
+dat2$Pr = "<0.001"
+#dat2$Pr.Chisq.[dat2$.rownames=="residual (MS)"] = "-"
+#dat2$Wald.statistic[dat2$.rownames=="residual (MS)"] = "-"
+#dat2$Df[dat2$.rownames=="residual (MS)"] = "-"
+dat2 = droplevels(dat2)
+levels(dat2$var) = c( "D12","D18","H12","NR17","NR18","NR19","FL17","SO17","SO18","V12")
+levels(dat2$Effect) = c( "Family","Site","Site:Family")
+# levels(dat2$var) = c( "Diameter\n2012","Height\n2012","Needle\nretention\n2017","Needle\nretention 2018","Needle\nretention\n2019","Fungal\nload\n2017","Stomata\nocclusion\n2017","Stomata\nocclusion\n2018","Volume\n2012")
+
+# dat2$NR = NA
+# dat2$NR[dat2$var=="Height\n2012"] = 1
+# dat2$NR[dat2$var=="Diameter\n2012"] = 2
+# dat2$NR[dat2$var=="Volume\n2012"] = 3
+# dat2$NR[dat2$var=="Stomata\nocclusion\n2017"] = 4
+# dat2$NR[dat2$var=="Stomata\nocclusion\n2018"] = 5
+# dat2$NR[dat2$var=="Fungal\nload\n2017"] = 6
+# dat2$NR[dat2$var=="Needle\nretention\n2017"] = 7
+# dat2$NR[dat2$var=="Needle\nretention\n2018"] = 8
+# dat2$NR[dat2$var=="Needle\nretention\n2019"] = 9
+# 
+# dat2 = dat2[order(dat2$NR),]
+# dat2 = dat2[,-4]
+dat2 =spread(dat2, key = var, value = Pr)
+
+dat2 = dat2[,c(1,4,2,3,11,8,9,10,5,6,7)]
+
+#levels(dat2$.rownames) = c("I","F","R","S","SxF")
+
+
+# rownames need to be removed otherwise they will show up in the table
+rownames(dat2) = NULL
+
+# Removing all the not assessed cells.
+dat2[2:3,4] = "-"
+dat2[2:3,8] = "-"
+dat2[2:3,10] = "-"
+#colnames(dat2) = c("Trait","Effect","Df","Sum of Sq.", "Wald stat.","p-value")
+
+
+kable(dat2, "latex", booktabs = T, align = "l",escape = T,caption ="P-values of F-Tests for fixed effects calculated with conditional sum of squares. H12 refers to height in 2012 (age 10); D12 refers to diameter in 2012; V12 refers to volume per tree in 2012; FL17 refers to fungal load in the needles in 2017 (age 15); SO17 and SO18 refers to percent of stomata occlusion in 2017 and 2018, respectively; NR17, NR18 and NR19 refer to needle retention in 2017, 2018 and 2019. In 2018, stomata occlusion and needle retention were only assessed on the Jordan River site, hence, no site effect was evaluated for this year. In 2018 and 2019, a sub-set of 22 families was sampled. The site effect is confounded by different initial spacing density at the two sites. Both sites are part of a 18-year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.")%>%
+  #collapse_rows(columns = 1, latex_hline = "none", valign = "top")%>%
+kable_styling(latex_options = c("scale_down","hold_position"))%>%
+  kable_styling(font_size = 8)%>%
+  kable_styling(full_width = F)%>%
+  column_spec(1:10,width="1cm")
+
+# 
+# colnames(dat) = c("Height age 10", # there is a problem with renaming of variables here (fixed for family means)
+#                    "Diam. age 10",
+#                    "Vol. age 10",
+#                    "SO 2017",
+#                   "SO 2018",
+#                   "FL 2017",
+#                     "NR 2017", 
+#                    "NR 2018",                   
+#                   "NR 2019"
+#                    )
+# rownames(dat) = c("Height age 10",
+#                    "Diam. age 10",
+#                    "Vol. age 10",
+#                    "SO 2017",
+#                   "SO 2018",
+#                   "FL 2017",
+#                     "NR 2017", 
+#                    "NR 2018",                   
+#                   "NR 2019")
+# dat$`NR 2018` = as.character(dat$`NR 2018`)
+# dat$`NR 2017` = as.character(dat$`NR 2017`)
+# dat$`SO 2018` = as.character(dat$`SO 2018`)
+# dat$`NR 2019` = as.character(dat$`NR 2019`)
+# dat$`FL 2017` = as.character(dat$`FL 2017`)
+# 
+# 
+# # Variables that were not assessed are indicated by a "-"
+# dat[1:4,5] = "-"
+# dat[5,6] = "-"
+# dat[5,7] = "-"
+# dat[1:7,8]= "-"
+# dat[5,9] = "-"
+# dat[8,9] = "-"
+# 
+# kable(dat, "latex",booktabs=T,escape = F,linesep = "",caption ="Family mean correlations for Jordan River (lower triangle) and North Arm (upper triangle) between among growth and variables representing tolerance or resistance to Swiss needle cast in a 20 year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada. Standard errors of the coefficients are indicates in brackets. Not assessed combinations are indicated by a dash. SO refers to stomata occlusion, NR refers to needle retention, FL refers to fungal load as assessed through quantitative polymerase chain reaction (qPCR).") %>%
+#   kable_styling(latex_options = "HOLD_position")%>%
+#   kable_styling(latex_options = "scale_down")#%>%
+#  # row_spec(0, angle = 90)%>% landscape()
+
+```
+\newpage
+
+```{r T2, message = FALSE,echo=F}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+#library(pander)
+dat = read.csv(paste(getwd(),"/Results/cor_matrix.csv",sep=""))
+dat_p =read.csv(paste(getwd(),"/Results/cor_matrix_p.csv",sep=""))
+
+#dat = read.csv(paste(getwd(),"/Results/gc_matrix.csv",sep=""))
+rownames(dat) = colnames(dat)[-1]
+rownames(dat_p) = colnames(dat_p)[-1]
+
+#cbind(1:length(colnames(dat)),colnames(dat))
+#cbind(1:length(rownames(dat)),rownames(dat))
+#str(dat)
+dat = dat[-c(8:9,11:12,14:15,17:20),-c(1,9:10,12:13,15:16,18:21)]
+dat_p = dat_p[-c(8:9,11:12,14:15,17:20),-c(1,9:10,12:13,15:16,18:21)]
+#dat = dat[-c(5:6,8:9,11:12,14:18),-c(1,6:7,9:10,12:13,15:19)] for gc_matrix 
+
+
+# df$Name <- ifelse(df$Var =="HGT" ,"Height at age 10",
+# ifelse(df$Var =="DIAM", "Diam. at age 10",
+# ....
+# ifelse(df$Var =="NR19", "NR 2019", "FAIL"))))
+
+colnames(dat_p) = c("Height age 10", # there is a problem with renaming of variables here (fixed for family means)
+                   "Diam. age 10",
+                   "Vol. age 10",
+                  "Diam. age 16",
+                   "SO 2017",
+                  "SO 2018",
+                  "FL 2017",
+                    "NR 2017", 
+                   "NR 2018",                   
+                  "NR 2019"
+                   )
+rownames(dat_p) = c("Height age 10",
+                   "Diam. age 10",
+                   "Vol. age 10",
+                  "Diam. age 16",
+                   "SO 2017",
+                  "SO 2018",
+                  "FL 2017",
+                    "NR 2017", 
+                   "NR 2018",                   
+                  "NR 2019")
+colnames(dat) = c("Height age 10", # there is a problem with renaming of variables here (fixed for family means)
+                   "Diam. age 10",
+                   "Vol. age 10",
+                  "Diam. age 16",
+                   "SO 2017",
+                  "SO 2018",
+                  "FL 2017",
+                    "NR 2017", 
+                   "NR 2018",                   
+                  "NR 2019"
+                   )
+rownames(dat) = c("Height age 10",
+                   "Diam. age 10",
+                   "Vol. age 10",
+                  "Diam. age 16",
+                   "SO 2017",
+                  "SO 2018",
+                  "FL 2017",
+                    "NR 2017", 
+                   "NR 2018",                   
+                  "NR 2019")
+dat$`NR 2018` = as.character(format(dat$`NR 2018`), nsmall = 2)
+dat$`NR 2017` = as.character(format(dat$`NR 2017`), nsmall = 2)
+dat$`SO 2018` = as.character(format(dat$`SO 2018`), nsmall = 2)
+dat$`SO 2017` = as.character(format(dat$`SO 2017`), nsmall = 2)
+dat$`NR 2019` = as.character(format(dat$`NR 2019`), nsmall = 2)
+dat$`FL 2017` = as.character(format(dat$`FL 2017`), nsmall = 2)
+dat$`Diam. age 16` = as.character(format(dat$`Diam. age 16`), nsmall = 2)
+dat$`Height age 10` = as.character(format(dat$`Height age 10`), nsmall = 2)
+dat$`Diam. age 10` = as.character(format(dat$`Diam. age 10`), nsmall = 2)
+
+#dat_p = p.adjust(as.matrix(dat_p),method="BH")
+#?p.adjust
+#dat_p =as.data.frame(matrix(p.adjust(as.vector(as.matrix(dat_p)), method='BH'),ncol=10))
+
+
+
+# Variables that were not assessed are indicated by a "-"
+colnames(dat_p) = c("V1","V2","V3","V4", "V5", "V6","V7","V8","V9","V10")
+dat[1:3,4] = "-"
+dat[4,5] = "-"
+dat[1:5,6] = "-"
+dat[c(4,6),7]= "-"
+dat[c(4,6),8]= "-"
+dat[1:8,9] = "-"
+dat[c(4,6,9),10] = "-"
+dat[c(1),c(1)] = ""
+dat[c(2),c(2)] = ""
+dat[c(3),c(3)] = ""
+dat[c(4),c(4)] = ""
+dat[c(5),c(5)] = ""
+dat[c(6),c(6)] = ""
+dat[c(7),c(7)] = ""
+dat[c(8),c(8)] = ""
+dat[c(9),c(9)] = ""
+dat[c(10),c(10)] = ""
+
+
+# dat$`Height age 10`[c(2:10)] <- cell_spec(dat$`Height age 10`[c(2:10)], format="latex", 
+#                      bold=ifelse(dat_p$V1[c(2:10)]<0.05,T,F))
+# dat$`Diam. age 10`[c(1,3:10)] <- cell_spec(dat$`Diam. age 10`[c(1,3:10)], format="latex", 
+#                      bold=ifelse(dat_p$V2[c(1,3:10)]<0.05,T,F))
+# dat$`Vol. age 10`[c(1:2,4:10)] <- cell_spec(dat$`Vol. age 10`[c(1:2,4:10)], format="latex", 
+#                      bold=ifelse(dat_p$V3[c(1:2,4:10)]<0.05,T,F))
+# dat$`Diam. age 16`[c(5:10)] <- cell_spec(dat$`Diam. age 16`[c(5:10)], format="latex", 
+#                      bold=ifelse(dat_p$V4[c(5:10)]<0.05,T,F))
+# dat$`SO 2017`[c(1:3,6:10)] <- cell_spec(dat$`SO 2017`[c(1:3,6:10)], format="latex", 
+#                      bold=ifelse(dat_p$V5[c(1:3,6:10)]<0.05,T,F))
+# dat$`SO 2018`[c(7:10)] <- cell_spec(dat$`SO 2018`[c(7:10)], format="latex", 
+#                      bold=ifelse(dat_p$V6[c(7:10)]<0.05,T,F))
+# dat$`FL 2017`[c(1:3,5,8:10)] <- cell_spec(dat$`FL 2017`[c(1:3,5,8:10)], format="latex", 
+#                      bold=ifelse(dat_p$V7[c(1:3,5,8:10)]<0.05,T,F))
+# dat$`NR 2017`[c(1:3,5,7,9:10)] <- cell_spec(dat$`NR 2017`[c(1:3,5,7,9:10)], format="latex", 
+#                      bold=ifelse(dat_p$V8[c(1:3,5,7,9:10)]<0.05,T,F))
+# dat$`NR 2018`[c(10)] <- cell_spec(dat$`NR 2018`[c(10)], format="latex", 
+#                      bold=ifelse(dat_p$V9[c(10)]<0.05,T,F))
+# dat$`NR 2019`[c(1:3,5,7:8)] <- cell_spec(dat$`NR 2019`[c(1:3,5,7:8)], format="latex", 
+#                      bold=ifelse(dat_p$V10[c(1:3,5,7:8)]<0.05,T,F))
+# #dat$`NR 2018`[10,] <- cell_spec(dat$`NR 2018`, format="latex", 
+# #                     bold=ifelse(dat_p$`NR 2018`<0.05,T,F))
+
+kable(dat, "latex",booktabs=T,escape = F,linesep = "",caption ="Family mean correlations for Jordan River (lower triangle) and North Arm (upper triangle) among growth and variables representing tolerance or resistance to Swiss needle cast in a 18-year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada. Bold font indicates significance of the correlation. Not assessed combinations are indicated by a dash. SO refers to stomata occlusion, NR refers to needle retention, FL refers to fungal load as assessed through quantitative polymerase chain reaction (qPCR). Jordan River is milder and wetter while North Arm is cooler and drier.") %>%
+  kable_styling(latex_options = "HOLD_position")%>%
+  kable_styling(latex_options = "scale_down")%>%
+  row_spec(0, angle = 45)#%>%
+  #cell_spec("latex", color =ifelse(mpg>20, "red", "blue"))
+ # row_spec(0, angle = 90)%>% landscape()
+
+```
+
+\newpage
+
+Figures
+==========
+
+```{r F1,fig.cap = "Location and climate of the two experimental sites on Vancouver Island, British Columbia, Canada, as shown in panel a. The two sites represent a full-sib trial established in 2003 for coastal Douglas-fir. The site Jordan River is indicated in blue, and the site North Arm is indicated in green. Panel b shows the average climate during the period of 1980 to 2010, the long-term average that best represents the conditions under which the trees were grown. The bars indicate monthly precipitation in millimeters (left axis). The lines indicate monthly temperature in $^\\circ$C (right axis). Data was interpolated using the software ClimateBC.", fig.width=9, fig.asp=.9,results =FALSE,echo=F,message=F,warning=F}
+library(ggplot2)
+library(sf)
+#library(rnaturalearth)
+library(ggspatial)
+library(tidyverse)
+library(cowplot)
+
+ worldmap  <- st_read(paste(getwd(),"/MapData/ne_10m_admin_0_countries.shp",sep=""))
+#worldmap = ne_load( scale = 10, type = 'countries', destdir = paste(getwd(),"/MapData",sep=""))
+ # worldmap <- ne_countries(scale = 'large', type = 'map_units',
+ #                          returnclass = 'sf')
+
+# lakes = ne_download(scale = 'large', type = "lakes", category = c("physical"), destdir = paste(getwd(),"/MapData",sep=""), load = TRUE,
+#                     returnclass = c("sf"))
+ lakes <- st_read(paste(getwd(),"/MapData/ne_10m_lakes.shp",sep=""))
+   # ne_load(scale = 'large', type = "lakes", category = c("physical"), destdir = paste(getwd(),"/MapData",sep=""),
+   #                    returnclass = c("sf"))
+
+  lakes_sm = st_read(paste(getwd(),"/MapData/ne_10m_lakes_north_america.shp",sep=""))
+    # ne_load(scale = 'large', type = "lakes_north_america", category = c("physical"), destdir=paste(getwd(),"/MapData",sep=""), 
+    #                      returnclass = c("sf"))
+#lakes_sm = ne_download(scale = 'large', type = "lakes_north_america", category = c("physical"), destdir =paste(getwd(),"/MapData",sep=""), load = TRUE,
+#                       returnclass = c("sf"))
+  #DF_range = st_read(paste(getwd(),"/MapData/DF_simplified_range_20km.shp",sep=""))
+  
+#NorthA <- worldmap[worldmap$continent == 'North America',]
+
+map=ggplot() + 
+  geom_sf(data = worldmap) + 
+  geom_sf(data=lakes,fill="white")+
+  geom_sf(data=lakes_sm,fill="white")+
+ # geom_sf(data=DF_range ,fill="grey",alpha=0.5)+
+  annotate("point", y = 48.43131, x = -124.029467, fill = "#2b83ba",colour="black",shape=21, size = 4)+
+  annotate("text", y = 48.43131+0.11, x = -124.029467-0.04, label="Jordan River",size=3)+
+  annotate("point", y =  48.843301, x = -124.111307, fill = "#a6d96a",colour="black",shape=21, size = 4)+
+  annotate("text", y =  48.843301+0.11, x = -124.111307-0.04, label="North Arm",size=3)+
+  annotation_scale(location = "tr", width_hint = 0.3) +
+  coord_sf(xlim = c(-126, -121), ylim = c(47, 51), expand = FALSE) +
+  scale_y_continuous(breaks = seq(47,51,1) )+
+  theme_bw()+
+  theme(legend.position = c(0.1,.9),legend.background = element_blank(), legend.title = element_blank(),
+        panel.spacing = unit(0, "lines"),strip.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        #plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"),
+        text = element_text(size=9),
+        panel.border = element_rect(fill=NA, colour = "black",size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        axis.text.y = element_text(size=9),
+        axis.text.x = element_text(size=9),
+        strip.background = element_rect(color = "black", size = .3),
+        strip.text = element_text(size=8),
+        panel.grid.minor = element_line(size = .2), panel.grid.major = element_line(size = .4))
+
+
+dat1a = read.csv(paste(getwd(),"/Results/SiteClimate.csv",sep=""))
+
+dat2 = dat1a[dat1a$period=="Normal_1981_2010",]
+
+
+# Get the temperatures separate and convert to long
+
+what<-data.frame(names(dat2))
+colnames(what)<-"colname"
+what$No<-rownames(what)
+#what
+
+
+### 6190
+
+temp6190_first <- dat2[,c(3,109:120)]
+temp6190_second <- reshape(temp6190_first,varying=list(2:13),direction="long")
+
+temp6190 <- temp6190_second[,-4]
+names(temp6190) <- c("SITE","MONTH","TEMP")
+
+# Get precip separate and convert to long
+
+precip6190_first <- dat2[,c(3,121:132)]
+precip6190_second <- reshape(precip6190_first,varying=list(2:13),direction="long")
+#head(precip6190_second)
+precip6190 <- precip6190_second[,-4]
+names(precip6190) <- c("SITE","MONTH","PRECIP")
+
+# Cbind
+site6190 <- merge(precip6190, temp6190, by = c("SITE","MONTH"))
+
+
+ylim.prim <- c(0, max(site6190$PRECIP))   # in this example, precipitation
+ylim.sec <- c(min(site6190$TEMP), max(site6190$TEMP))    # in this example, temperature
+
+
+b <- diff(ylim.prim)/diff(ylim.sec)
+a <- b*(ylim.prim[1] - ylim.sec[1])
+
+levels(site6190$SITE) = c("Jordan River","North Arm")
+library(scales)
+p1 =ggplot(site6190, aes(MONTH, PRECIP)) +
+  geom_col(aes(fill=SITE),position = "dodge",alpha=0.7) +
+  geom_line(aes(y = a + TEMP*b,col=SITE),size=1) +
+  scale_y_continuous("Precipitation (mm)", sec.axis = sec_axis(~ (. - a)/b, name = "Temperature (°C)")) +
+  scale_x_continuous("Month", breaks = 1:12) +
+  theme_bw()+
+  theme(legend.position = "none",
+
+                   legend.title = element_blank(),
+                   axis.text.x = element_text(angle = 0, size=10,vjust = 0.4),
+                   panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+                   #axis.title.y = element_blank(),
+                   axis.title.x=element_text(size=10),
+                   axis.text.y=element_text(size=10),
+                   text = element_text(size=10),
+                   panel.border = element_rect(fill=NA, colour = "black", size=.3),
+                   axis.ticks = element_line(colour = "black", size = .3),
+                   strip.background = element_rect(color = "black", size = .3),
+                  panel.grid.minor = element_line(size = .1),
+                   panel.grid.major = element_line(size = .3),
+                    panel.background = element_rect(fill = "transparent"), # bg of the panel
+    #plot.background = element_rect(fill = alpha('grey', 0.6), color = NA), # bg of the plot
+    #legend.background = element_rect(fill = "transparent"), # get rid of legend bg
+    #legend.box.background = element_rect(fill = "transparent"), # get rid of legend panel bg
+                   plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"))+
+  scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+  scale_fill_manual(values=c("#2b83ba","#a6d96a"))
+# 
+# require(gridExtra)
+# require(grid)
+
+# plot_grid(map,  arrangeGrob(nullGrob(), nrow=2), p1,
+#           ncol=2, rel_widths=c(1,1),rel_heights = c(1,.5),axis = "lr")
+
+# plot_grid(map,   p1,
+#           ncol=1, rel_widths=c(1,1),rel_heights = c(1,1),axis = "lr",align="v")
+
+# plot_grid(map,p1,align="hv",rel_heights = c(.5,.2),rel_widths = c(1,1))
+# 
+#plot_grid(map,p1, rel_widths = c(1, 1),rel_heights = c(1, 1))
+
+
+plot_grid(map,p1, rel_widths = c(1, 1),rel_heights = c(1, 1),ncol=2,nrow=2,align="vh",axis="lr",labels = "auto")
+
+# plot.with.inset <-
+#   ggdraw() +
+#   draw_plot(map) +
+#   draw_plot(p1, x = .5, y = .62, width = .35, height = .3)
+# ?draw_plot
+# 
+# plot.with.inset
+
+```
+
+```{R F2,fig.cap= "Four measures of Douglas-fir growth as well as tolerance and resistance to Swiss needle cast. Each bar represents the family mean of tree volume (panel a), needle retention (panel b), stomata occlusion (panel c) and fungal load (panel d) by experimental site. Error bars indicate the standard error of the mean. Jordan River is the milder, wetter site and North Arm is the cooler drier site. The horizontal dashed red lines show the site averages.",results =FALSE,echo=F,message=F,warning=F, fig.width=5, fig.height=6.5}
+library(tidyverse)
+library(plotrix)
+library(cowplot)
+dat1 = read.csv(paste(getwd(),"/Results/Data_both_sites.csv",sep=""))
+dat_jr = subset(dat1,site=="01jordan")
+dat_na = subset(dat1,site=="northarm")
+cbind(1:length(colnames(dat1)),colnames(dat1))
+dat2 = dat1[,c(4,6,18:20,25:27,29,34,39,40:46,48)]
+dat5 = dat2 %>%
+  group_by(fam,site) %>%
+  summarise_all(funs(mean,std.error),na.rm=T)
+scale_x_reordered <- function(..., sep = "___") {
+  reg <- paste0(sep, ".+$")
+  ggplot2::scale_x_discrete(labels = function(x) gsub(reg, "", x), ...)
+}
+reorder_within <- function(x, by, within, fun = mean, sep = "___", ...) {
+  new_x <- paste(x, within, sep = sep)
+  stats::reorder(new_x, by, FUN = fun)
+}
+dat5 = dat5[is.na(dat5$SO_mean_2017_mean)==F,]
+dat5 = dat5[dat5$fam!="319" & dat5$fam!="353",]
+levels(dat5$site) = c("Jordan River", "North Arm")
+dat5 <- dat5 %>% group_by(site) %>%
+  mutate(med_vol = mean(vol12_10yr_mean,na.rm=T),
+         med_SO = mean(SO_mean_2017_mean,na.rm=T),
+         med_PNG = mean(Prop_NG_mean,na.rm=T),
+         med_NR = mean(NR_3yr_2017_mean,na.rm=T)
+  )
+p_vol = ggplot(dat5,aes(x=reorder_within(fam, vol12_10yr_mean, site),y=vol12_10yr_mean,fill=site))+
+  geom_col()+
+  #stat_summary(fun.y=mean, geom="point", shape=16, size=1, color="red") +
+  theme_bw()+
+  labs(x="Family",y=expression(paste("Average volume per tree ", m^3)))+
+  theme(axis.text.x = element_text(angle=90))+
+  coord_cartesian(ylim=c(0,6.2))+
+  geom_hline(aes(yintercept = med_vol, group = site), col="red",linetype="dashed")+
+  scale_x_reordered() +
+  geom_errorbar(aes(ymin=vol12_10yr_mean-vol12_10yr_std.error, 
+                    ymax=vol12_10yr_mean+vol12_10yr_std.error), width=0,lwd=0.3,
+                position=position_dodge(.9),col="gray33") +
+  theme_bw()+
+  facet_grid(~site,scales="free")+
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, size=6,vjust = 0.4),
+        panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+        #axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.y=element_text(size=6),
+        text = element_text(size=6),
+        panel.border = element_rect(fill=NA, colour = "black", size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        strip.background = element_rect(color = "black", size = .3),
+        panel.grid.minor = element_line(size = .1), 
+        panel.grid.major = element_line(size = .3),
+        plot.margin = margin(t=0,b=-.5,l=0,r=0, unit="cm"))+
+  scale_fill_manual(values=c("#2b83ba","#a6d96a"))
+p_SO = ggplot(dat5,aes(x=reorder_within(fam, SO_mean_2017_mean, site),y=SO_mean_2017_mean,fill=site))+
+  geom_col()+
+  #stat_summary(fun.y=mean, geom="point", shape=16, size=1, color="red") +
+  theme_bw()+
+  labs(x="Family",y="Percent of occluded stomata")+
+  theme(axis.text.x = element_text(angle=90))+
+  coord_cartesian(ylim=c(0,40))+
+  scale_x_reordered() +
+  geom_hline(aes(yintercept = med_SO, group = site),col="red",linetype="dashed")+
+  geom_errorbar(aes(ymin=SO_mean_2017_mean-SO_mean_2017_std.error, 
+                    ymax=SO_mean_2017_mean+SO_mean_2017_std.error), width=0,lwd=0.3,
+                position=position_dodge(.9),col="gray33") +
+  theme_bw()+
+  facet_grid(~site,scales="free")+
+  #geom_hline(aes(yintercept = SO_mean_2017,col=site), data=dat_site)+
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, size=6,vjust = 0.4),
+        panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+        #axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.y=element_text(size=6),
+        text = element_text(size=6),
+        panel.border = element_rect(fill=NA, colour = "black", size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        strip.background = element_rect(color = "black", size = .3),
+        panel.grid.minor = element_line(size = .1), 
+        panel.grid.major = element_line(size = .3),
+        plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"))+
+  scale_fill_manual(values=c("#2b83ba","#a6d96a"))
+p_FL = ggplot(dat5,aes(x=reorder_within(fam, Prop_NG_mean, site),y=Prop_NG_mean*100,fill=site))+
+  geom_col()+
+  #stat_summary(fun.y=mean, geom="point", shape=16, size=1, color="red") +
+  theme_bw()+
+  labs(x="Family",y="Percentage of SNC DNA")+
+  theme(axis.text.x = element_text(angle=90))+
+  coord_cartesian(ylim=c(0,16))+
+  geom_hline(aes(yintercept = med_PNG*100, group = site),col="red",linetype="dashed")+
+  scale_x_reordered() +
+  geom_errorbar(aes(ymin=Prop_NG_mean*100-Prop_NG_std.error*100, 
+                    ymax=Prop_NG_mean*100+Prop_NG_std.error*100), width=0,lwd=0.3,
+                position=position_dodge(.9),col="gray33") +
+  theme_bw()+
+  #geom_hline(yintercept=mean(dat5$Prop_NG_mean,na.rm=T))+
+  facet_grid(~site,scales="free")+
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, size=6,vjust = 0.4),
+        panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+        #axis.title.x = element_blank(),
+        axis.title.x=element_text(size=6),
+        axis.text.y=element_text(size=6),
+        text = element_text(size=6),
+        panel.border = element_rect(fill=NA, colour = "black", size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        strip.background = element_rect(color = "black", size = .3),
+        panel.grid.minor = element_line(size = .1), 
+        panel.grid.major = element_line(size = .3),
+        plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"))+
+  scale_fill_manual(values=c("#2b83ba","#a6d96a"))
+p_NR = ggplot(dat5,aes(x=reorder_within(fam, NR_3yr_2017_mean, site),y=NR_3yr_2017_mean*10,fill=site))+
+  geom_col()+
+  #stat_summary(fun.y=mean, geom="point", shape=16, size=1, color="red") +
+  theme_bw()+
+  labs(x="Family",y="Needle retention in year 3 (2017)")+
+  theme(axis.text.x = element_text(angle=90))+
+  coord_cartesian(ylim=c(0,100))+
+  scale_x_reordered() +
+  geom_hline(aes(yintercept = med_NR*10, group = site),col="red",linetype="dashed")+
+  geom_errorbar(aes(ymin=NR_3yr_2017_mean*10-NR_3yr_2017_std.error*10, 
+                    ymax=NR_3yr_2017_mean*10+NR_3yr_2017_std.error*10), width=0,lwd=0.3,
+                position=position_dodge(.9),col="gray33") +
+  theme_bw()+
+  # geom_hline(yintercept=mean(dat5$NR_3yr_2017_mean,na.rm=T))+
+  facet_grid(~site,scales="free")+
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 90, size=6,vjust = 0.4),
+        panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        #axis.title.x=element_text(size=10),
+        axis.text.y=element_text(size=6),
+        text = element_text(size=6),
+        panel.border = element_rect(fill=NA, colour = "black", size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        strip.background = element_rect(color = "black", size = .3),
+        panel.grid.minor = element_line(size = .1), 
+        panel.grid.major = element_line(size = .3),
+        plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"))+
+  scale_fill_manual(values=c("#2b83ba","#a6d96a"))
+p1 = plot_grid(p_vol,p_NR,p_SO,p_FL,ncol=1,labels="auto",align="hv")
+p1
+```
+
+```{R F2a,fig.cap= "Mean performance of 32 Douglas-fir families across the two experimental sites for tree volume at age 10, fungal load at age 15, stomata occlusion at age 15, and needle retention of three-year-old needles at age 15 (2017) and at age 17 (2019). Crossing lines indicate rank changes of families across the two sites. Jordan River is the milder, wetter site and North Arm is the cooler drier site. Both sites are part of a 18-year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.",results =FALSE,echo=F,message=F,warning=F, fig.width=2, fig.height=6}
+library(tidyverse)
+library(plotrix)
+library(cowplot)
+library(Hmisc)
+
+dat1 = read.csv(paste(getwd(),"/Results/Data_both_sites.csv",sep=""))
+
+
+my_fams = c(301,306,307,308,314,317,318,322,324,326,327,331,333,334,338,340,343,349,351,352,357,358,359,362,363,364,368,370,376,378,380,381)
+
+myfams = as.data.frame(my_fams)
+colnames(myfams) = "fam"
+
+myfams$fam = as.factor(myfams$fam)
+
+dat1 = merge(myfams,dat1, by="fam",all.x=T)
+
+
+#cbind(1:length(colnames(dat1)),colnames(dat1))
+dat2 = dat1[,c(1,5, 20,27,29,42,48)]
+
+dat5 = dat2 %>%
+  group_by(fam,site) %>%
+  summarise_all(funs(mean),na.rm=T)
+
+dat5$Prop_NG = dat5$Prop_NG*100
+dat5$NR_3yr_2017 = dat5$NR_3yr_2017*10
+dat5$NR_3yr_2019 = dat5$NR_3yr_2019*10
+#dat2a = dat1a[dat1a$Var=="SO_mean_2017",]
+
+dat5_jr= dat5[dat5$site=="01jordan",]
+dat5_na = dat5[dat5$site=="northarm",]
+
+
+# Calculate site-site correlation
+dat_cor = cbind(dat5_jr,dat5_na)
+
+dat_cor = as.matrix(dat_cor[,-c(1,2,8,9)])
+
+corr_r = as.data.frame(rcorr(dat_cor)$r) # tested spearman as well but no differnt result
+corr_p = as.data.frame(rcorr(dat_cor)$P)
+
+corr_r = corr_r[c(6,7,8,9,10),c(1,2,3,4,5)]
+corr_p = corr_p[c(6,7,8,9,10),c(1,2,3,4,5)]
+rownames(corr_r) = colnames(corr_r)
+rownames(corr_p) = colnames(corr_p)
+
+diag_r =diag(as.matrix(corr_r))
+diag_p =diag(as.matrix(corr_p))
+
+my_cor = NULL
+my_cor$var = rownames(corr_r)
+my_cor$var2 = rownames(corr_r)
+my_cor$r = diag_r
+my_cor$p = diag_p
+my_cor$p_adj = p.adjust(my_cor$p,method="BH")
+my_cor = as.data.frame(my_cor)
+
+dat6 = gather(dat5,var,value,vol12_10yr:Prop_NG)
+dat6$var = as.factor(dat6$var)
+levels(dat6$site) = c("Jordan\nRiver","North\nArm")
+
+levels(dat6$var) = c( "Needle retention\n2017","Needle retention\n2019","Fungal load\n2017","Stomata occlusion\n2017","Volume\nage 10")
+levels(my_cor$var) = c( "Needle retention\n2017","Needle retention\n2019","Fungal load\n2017","Stomata occlusion\n2017","Volume\nage 10")
+
+
+# Reorder levels
+dat6$var <- factor(dat6$var, levels = c("Volume\nage 10",
+                                        "Fungal load\n2017",
+                                        "Stomata occlusion\n2017",
+                                        "Needle retention\n2017",
+                                        "Needle retention\n2019"
+))
+# Reorder levels
+my_cor$var <- factor(my_cor$var , levels = c("Volume\nage 10",
+                                        "Fungal load\n2017",
+                                        "Stomata occlusion\n2017",
+                                        "Needle retention\n2017",
+                                        "Needle retention\n2019"
+))
+
+levels(dat6$var) = c("Volume age\n 11 (m³)",
+                     "Fungal load\n2017 (%)",
+                     "Stomata occlusion\n 2017 (%)",
+                     "Needle retention\n 2017 (%)",
+                     "Needle retention\n 2019 (%)")
+
+levels(my_cor$var) = c("Volume age\n 11 (m³)",
+                     "Fungal load\n2017 (%)",
+                     "Stomata occlusion\n 2017 (%)",
+                     "Needle retention\n 2017 (%)",
+                     "Needle retention\n 2019 (%)")
+
+my_cor$lab = paste("r= ",format(round(my_cor$r,2),nsmall=2)," (",round(my_cor$p_adj,2),")",sep="")
+
+my_cor = my_cor[,c(1,6)]
+dat6 = merge(dat6,my_cor,by="var")
+
+p1=ggplot(dat6, aes(x=site,y=value))+
+  geom_line(aes(group=fam),col="grey",alpha=0.5)+
+  facet_grid(var~., scales="free",switch="y")+
+  #geom_text( size=3)+
+  geom_point(aes(col=site),alpha=0.5,shape=16)+
+  theme_bw()+
+  theme(legend.position = "none",
+        #axis.text.x = element_text(angle = 0, size=10,vjust = 0.4),
+        #panel.spacing = unit(-0.1, "lines"),
+        #strip.text.y = element_blank(),
+        #axis.title.y = element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        #axis.text.y=element_text(size=8),
+        #text = element_text(size=8),
+        panel.border = element_rect(fill=NA, colour = "black", size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        #strip.background = element_rect(color = "black", size = .3),
+        strip.background = element_blank(),
+        strip.placement = "outside",
+        panel.grid.minor = element_line(size = .1),
+        panel.grid.major = element_line(size = .3),
+        #strip.text.y = element_text(margin = margin(.1, 1, .1, 1, "cm")),
+        #plot.margin = margin(t=0,b=0,l=0,r=.1, unit="cm")
+  )+
+  scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+  geom_text(
+    data    = my_cor,
+    mapping = aes(x = -Inf, y = -Inf, label = lab),
+    size=2,
+    hjust   = -1.5,
+    vjust   = -1)
+p1
+
+
+```
+
+
+```{R F3,fig.cap= "Trade-offs among tree volume at age 10 (2012) as well as tolerance and resistance to Swiss needle cast. Panel a shows a scatter plot of family means for Swiss needle cast tolerance (as expressed by needle retention in 2017), and resistance (as expressed by fungal load in 2017). Blue dots indicate the family means for the Jordan River site, while green dots indicate family means for the North Arm site. The dashed red horizontal and vertical lines separate the scatter into quadrants from low to high resistance and from low to high tolerance. Panel b shows a scatter plot of family means for Swiss needle cast tolerance and productivity (as expressed by tree volume). Here, the dashed red lines separate the scatter into quadrants from high to low tolerance and from low to high productivity. Tolerance and resistance to Swiss needle cast was assessed on two sites in a full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.",results =FALSE,echo=F,message=F,warning=F, fig.width=4, fig.height=6}
+
+library(tidyverse)
+library(plotrix)
+library(cowplot)
+
+dat1 = read.csv(paste(getwd(),"/Results/Data_both_sites.csv",sep=""))
+
+
+my_fams = c(301,306,307,308,314,317,318,322,324,326,327,331,333,334,338,340,343,349,351,352,357,358,359,362,363,364,368,370,376,378,380,381)
+
+myfams = as.data.frame(my_fams)
+colnames(myfams) = "fam"
+
+myfams$fam = as.factor(myfams$fam)
+
+dat1 = merge(myfams,dat1, by="fam",all.x=T)
+
+
+#cbind(1:length(colnames(dat1)),colnames(dat1))
+dat2 = dat1[,c(1,5, 20,27,29,42,48)]
+
+dat5 = dat2 %>%
+  group_by(fam,site) %>%
+  summarise_all(funs(mean),na.rm=T)
+
+dat5$Prop_NG = dat5$Prop_NG*100
+dat5$NR_3yr_2017 = dat5$NR_3yr_2017*10
+dat5$NR_3yr_2019 = dat5$NR_3yr_2019*10
+levels(dat5$site) = c("Jordan River","North Arm")
+# p1=ggplot(dat5,aes(y=NR_3yr_2017,x=SO_mean_2017,col=site,label=fam,group=fam))+
+#   geom_hline(yintercept = mean(dat5$NR_3yr_2017,na.rm=T),alpha=0.5,col="red",linetype="dashed")+
+#   geom_vline(xintercept=mean(dat5$SO_mean_2017,na.rm=T),alpha=0.5,col="red",linetype="dashed")+
+#   geom_line(col="black",alpha=0.2)+
+#   #geom_point(alpha=.5)+
+#   geom_text(alpha=0.9)+
+#   scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+#   theme_bw()+
+#   labs(y="Family mean for needle retention\n (2017)",
+#        x="Family mean for stomata occlusion (2017)")+
+#   theme(legend.position = c(.8,.25),
+#         legend.background = element_blank(),
+#         legend.box = "horizontal",
+#         legend.key = element_rect(fill = "grey90"),
+#         legend.title = element_blank(),
+#         # axis.text.x = element_text(angle = 0, size=10,vjust = 0.0),
+#         #panel.spacing = unit(0.1, "lines"),
+#         #strip.text.y = element_blank(),
+#         #axis.title.x = element_blank(),
+#         axis.title.x=element_text(size=10),
+#         axis.text.y=element_text(size=10),
+#         text = element_text(size=10))+
+#   annotate("text", x = 30, y = 85, label = "Tolerant and\n non-resistant",size=3)+
+#   annotate("text", x = 10, y = 85, label = "Tolerant and\n resistant",size=3)+
+#   annotate("text", x = 10, y = 0, label = "Non-tolerant\n and resistant",size=3)+
+#   annotate("text", x = 30, y = 0, label = "Non-tolerant\n and non-resistant",size=3)#
+# p1
+
+dat5$fam2 = dat5$fam
+
+dat5$fam2[dat5$fam != "349"&
+            dat5$fam != "318"&
+            dat5$fam != "306"&
+            dat5$fam != "308"&
+            dat5$fam != "324"&
+            dat5$fam != "334"&
+            dat5$fam != "331"] = NA
+
+dat5$fam2[dat5$site!="Jordan River"] = NA
+
+  
+p1a=ggplot(dat5,aes(y=NR_3yr_2017,x=Prop_NG,col=site,label=fam2,group=fam))+
+  geom_hline(yintercept = mean(dat5$NR_3yr_2017,na.rm=T),alpha=0.5,col="red",linetype="dashed")+
+  geom_vline(xintercept=mean(dat5$Prop_NG,na.rm=T),alpha=0.5,col="red",linetype="dashed")+
+  geom_line(col="black",alpha=0.2)+
+  coord_cartesian(xlim=c(0,20),ylim=c(0,100))+
+  geom_point(shape=16)+
+  geom_text(nudge_x=1,nudge_y=-.5,alpha=0.9,size=3,show.legend = FALSE)+
+  scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+  theme_bw()+
+  labs(y="Family mean for needle retention\n (2017)",
+       x="Family mean for fungal load (2017)")+
+  theme(legend.position = c(.85,.4),
+        legend.background = element_blank(),
+        legend.box = "horizontal",
+        legend.key = element_rect(fill = "grey90"),
+        legend.title = element_blank(),
+        # axis.text.x = element_text(angle = 0, size=10,vjust = 0.0),
+        #panel.spacing = unit(0.1, "lines"),
+        #strip.text.y = element_blank(),
+        #axis.title.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        axis.title.x=element_text(size=8),
+        axis.text.y=element_text(size=8),
+        axis.text.x=element_text(size=8),
+        text = element_text(size=8))+
+  annotate("text", x = 17, y = 90, label = "Tolerant and\n non-resistant",size=3,alpha=0.5)+
+  annotate("text", x = 2, y = 90, label = "Tolerant and\n resistant",size=3,alpha=0.5)+
+  annotate("text", x = 2, y = 15, label = "Non-tolerant\n and resistant",size=3,alpha=0.5)+
+  annotate("text", x = 17, y = 15, label = "Non-tolerant\n and non-resistant",size=3,alpha=0.5)#
+
+dat5$fam3 = dat5$fam
+
+dat5$fam3[dat5$fam != "349"&
+            dat5$fam != "308"&
+            dat5$fam != "351"&
+            dat5$fam != "318"&
+            dat5$fam != "317"&
+            dat5$fam != "306"&
+            dat5$fam != "331"] = NA
+
+dat5$fam3[dat5$site!="Jordan River"] = NA
+
+
+p2=ggplot(dat5,aes(y=NR_3yr_2017,x=vol12_10yr,col=site,label=fam3,group=fam))+
+  geom_hline(yintercept = mean(dat5$NR_3yr_2017,na.rm=T),alpha=0.5,col="red",linetype="dashed")+
+  geom_vline(xintercept=mean(dat5$vol12_10yr,na.rm=T),alpha=0.5,col="red",linetype="dashed")+
+  geom_line(col="black",alpha=0.2)+
+  coord_cartesian(xlim=c(-0,8),ylim=c(-20,120))+
+  geom_point(shape=16)+
+  geom_text(nudge_x=.5,nudge_y=-.25,alpha=0.9,size=3)+
+  scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+  theme_bw()+
+  labs(y="Family mean for needle retention\n (2017)",
+       x="Family mean for volume age 10 (2012)")+
+  theme(legend.position = "none",
+        legend.background = element_blank(),
+        legend.box = "horizontal",
+        legend.key = element_rect(fill = "grey90"),
+        legend.title = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        # axis.text.x = element_text(angle = 0, size=10,vjust = 0.0),
+        #panel.spacing = unit(0.1, "lines"),
+        #strip.text.y = element_blank(),
+        #axis.title.x = element_blank(),
+        axis.title.x=element_text(size=8),
+        axis.text.y=element_text(size=8),
+        axis.text.x=element_text(size=8),
+        text = element_text(size=8))+
+  #panel.border = element_rect(fill=NA, colour = "black", size=.3),
+  #axis.ticks = element_line(colour = "black", size = .3),
+  #strip.background = element_rect(color = "black", size = .3),
+  #panel.grid.minor = element_line(size = .1), 
+  #panel.grid.major = element_line(size = .3),
+  #  plot.margin = margin(t=0,b=0,l=0.2,r=0, unit="cm"))+
+  annotate("text", x = 6, y = 100, label = "Tolerant and\n productive",size=3,alpha=0.5)+
+  annotate("text", x = 1, y = 100, label = "Tolerant and\n less-productive",size=3,alpha=0.5)+
+  annotate("text", x = 1, y = 0, label = "Non-tolerant and\n less-productive",size=3,alpha=0.5)+
+  annotate("text", x = 6, y = 0, label = "Non-tolerant and\n productive",size=3,alpha=0.5)#
+
+
+p3 = plot_grid(p1a,p2,ncol=1,labels="auto",align="hv",rel_heights = c(1, 1))
+p3
+  
+```
+
+
+```{R F4,fig.cap= "Average needle retention by site for sampling dates of 2017, 2018 and 2019. The milder, wetter site of Jordan River is indicated in blue, and the cooler, drier site of North Arm is indicated in green. Needle retention was not assessed at North Arm in 2018. Error bars indicate the standard error of the mean. In 2017 and 2018, up to 3-year-old branch internodes were scored for needle retention. In 2019, up to 4-year-old internodes were scored. The assessment was conducted in June of each year, and while the current year's flush was already developing, it was not assessed. Needle retention is considered a tolerance trait to Swiss needle cast. All data was obtained from a 18 year full-sib trial for coastal Douglas-fir on Vancouver Island, Canada.",results =FALSE,echo=F,message=F,warning=F, fig.width=3.5, fig.height=3.5}
+
+library(tidyverse)
+library(plotrix)
+library(cowplot)
+
+dat1 = read.csv(paste(getwd(),"/Results/Data_both_sites.csv",sep=""))
+
+cbind(1:length(colnames(dat1)),colnames(dat1))
+
+dat3 = dat1[,c(4,6,25:27,31:33,40:43)]
+
+
+dat3 = dat3 %>%
+  group_by(site,fam) %>%
+  summarise_all(funs(mean),na.rm=T)
+
+dat6 = dat3 %>%
+    group_by(site) %>%
+    summarise_all(funs(mean),na.rm=T)
+
+cbind(1:length(colnames(dat6)),colnames(dat6))
+
+dat7 = gather(dat6,year,NR,NR_1yr_2017:NR_4yr_2019)
+
+dat3 = dat3[,-2]
+dat6 = dat3 %>%
+  group_by(site) %>%
+  summarise_all(funs(std.error),na.rm=T)
+
+dat8 = gather(dat6,year,NR,NR_1yr_2017:NR_4yr_2019)
+
+dat7$SE = dat8$NR
+
+dat7 = dat7[order(dat7$site),]
+
+dat7$Age= str_split_fixed(dat7$year, "_", 3)[,2]
+dat7$Age[dat7$Age=="1yr"] = "1"
+dat7$Age[dat7$Age=="2yr"] = "2"
+dat7$Age[dat7$Age=="3yr"] = "3"
+dat7$Age[dat7$Age=="4yr"] = "4"
+
+dat7$Age = as.numeric(dat7$Age)
+dat7$Year= as.factor(str_split_fixed(dat7$year, "_", 3)[,3])
+str(dat7)
+
+dat7$Year_age = as.numeric(as.character(dat7$Year)) - dat7$Age
+
+
+# Label flush needles formed one year prior to sample year
+
+#-1 year flush -2 yyr
+dat7 = dat7[-c(14:16),]
+
+levels(dat7$site) = c("Jordan River","North Arm")
+
+dat7$Year_site = paste(dat7$Year,dat7$site,sep="")
+
+
+p5=ggplot(dat7,aes(x=Age,y=NR*10,col=site,group=Year_site))+
+  geom_line(aes(col=site))+
+  geom_point()+
+  geom_linerange(aes(ymin = NR*10-SE*10, ymax = NR*10+SE*10))+
+  theme_bw()+
+  geom_text(data = dat7 %>% filter(Age == 3), aes(label = Year,
+                                                               x = Age + 0.3,
+                                                               y = NR*10,
+
+                                                          group=Year_site),col="black") +
+  #facet_grid(~site)+
+  theme(legend.position = c(.2,.2),
+        legend.background = element_blank(),
+        legend.title = element_blank(),
+        axis.text.x = element_text(angle = 0, size=10,vjust = 0.4),
+        panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+        #axis.title.y = element_blank(),
+        axis.title.x=element_text(size=10),
+        axis.text.y=element_text(size=10),
+        text = element_text(size=10),
+        panel.border = element_rect(fill=NA, colour = "black", size=.3),
+        axis.ticks = element_line(colour = "black", size = .3),
+        #strip.background = element_rect(color = "black", size = .3),
+        strip.background = element_blank(),
+        panel.grid.minor = element_line(size = .1),
+        panel.grid.major = element_line(size = .3),
+        plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"))+
+  scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+labs(y="Needle retention (%)",x="Needle age (years)")
+p5
+
+# p4=ggplot(dat7,aes(x=Year_age,y=NR*10,col=site,group=Year_site))+
+#   geom_line(aes(col=site))+
+#   geom_point()+
+#   geom_linerange(aes(ymin = NR*10-SE*10, ymax = NR*10+SE*10))+
+#   theme_bw()+
+#   #facet_grid(~site)+
+#   theme(legend.position = c(.2,.2),
+#         legend.background = element_blank(),
+#         legend.title = element_blank(),
+#         axis.text.x = element_text(angle = 0, size=10,vjust = 0.4),
+#         panel.spacing = unit(-0.1, "lines"),strip.text.y = element_blank(),
+#         #axis.title.y = element_blank(),
+#         axis.title.x=element_text(size=10),
+#         axis.text.y=element_text(size=10),
+#         text = element_text(size=10),
+#         panel.border = element_rect(fill=NA, colour = "black", size=.3),
+#         axis.ticks = element_line(colour = "black", size = .3),
+#         strip.background = element_rect(color = "black", size = .3),
+#         panel.grid.minor = element_line(size = .1),
+#         panel.grid.major = element_line(size = .3),
+#         plot.margin = margin(t=0,b=0,l=0,r=0, unit="cm"))+
+#         scale_x_reverse()+
+#   scale_color_manual(values=c("#2b83ba","#a6d96a"))+
+#   labs(y="Needle retention (%)",x="Needle age")
+# p4
+
+```
+
+\newpage
+# Supplementary material {-}
+
+\beginsupplement
+
+
+```{r ST1, message = FALSE,echo=F}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+
+dat =  read.csv(paste(getwd(),"/Results/Sequence.csv",sep=""))
+
+dat$Target = cell_spec(dat$Target,"latex",italic = T)
+
+rownames(dat) = NULL
+#kable(mtcars[1:8, 1:4], "latex", booktabs = T, linesep = "") %>%
+#  kable_styling(latex_options = "striped", stripe_index =c(1,2, 5:6))
+
+kable(dat, "latex",booktabs=T,escape = F,linesep = "",caption ="Primers and probe sequences used for quantitative polymerase chain reaction (qPCR) following Winton et al. 2002. The underlined letter in the probe sequence for \\textit{Pseudotsuga menziesii} indicates a correction to the sequence used by Winton et al. (2002). The primer sequences are written 5’-3’") %>% kable_styling(latex_options = "HOLD_position")
+```
+
+\newpage
+```{r SF1, fig.cap= "Example for the standard curve used to calculate the proportion of SNC-DNA in Douglas-fir needles based on known amounts of DNA. The DNA-amount is displayed as the second logarithm. Regression equations are provided for both targets.",results =FALSE,echo=F,message=F,warning=F, fig.width=3.5, fig.height=3.5}
+library(knitr)
+library(ggplot2)
+library(tidyverse)
+
+dat =  read.csv(paste(getwd(),"/Results/Plate_standards.csv",sep=""))
+dat = dat[dat$Plate=="Plate3",]
+ dat_fam = dat[dat$Fluor=="FAM",]
+mDgl=  lm(log2(DNA_amount)~Cq,data=dat_fam)
+summary(mDgl)
+
+dat_hex = dat[dat$Fluor=="HEX",]
+# mng=  lm(log2(DNA_amount)~Cq,data=dat_hex)
+# summary(mng)
+
+
+dat$equation=NA
+#equation=NULL
+dat$equation[dat$Fluor=="FAM"] = as.character(expression(paste("y=32.06-0.934x,",R^{2}, "=0.99, p<0.001")))
+dat$equation[dat$Fluor=="HEX"] = as.character(expression(paste("y=35.58-0.982x,",R^{2}, "=0.99, p<0.001")))
+#str(dat)
+levels(dat$Fluor) = c("Nothophaeocryptopus gaeumannii", "Pseudotsuga menziesii")
+
+p1= ggplot(dat,aes(x=log2(DNA_amount), y=Cq,col=Fluor))+
+  geom_point()+
+  stat_smooth(method="lm",se=FALSE)+
+  annotate("text", x=1,y=40, label = expression(paste("y=32.06-0.934x, ",R^{2}, "=0.99, p<0.001")),size=2 )+
+  annotate("text", x=5,y=25, label = expression(paste("y=35.58-0.982x, ",R^{2}, "=0.99, p<0.001")),size=2 )+
+  labs(x=expression(Log2~of~DNA~amount~(ng/mu*l)),y="Threshold cycle")+
+  #annotate("point", x = log2(11.692113), y = 32.60946)+# JR 1318
+  #annotate("point", x = log2(1.8668636), y = 33.32905)+ # JR 1318
+   #annotate("point", x = log2(53.1099185), y = 28.16236)+
+  #annotate("point", x = log2(1.8668636), y = 33.32905)+
+  theme_bw()+
+  theme(legend.position = c(.65,.8),
+        legend.background = element_blank(),
+        legend.key=element_blank(),
+        #legend.background = element_blank(),
+        #legend.box = "horizontal",
+        #legend.key = element_blank(),
+        legend.title = element_blank(),
+        # axis.text.x = element_text(angle = 0, size=10,vjust = 0.0),
+        #panel.spacing = unit(0.1, "lines"),
+        #strip.text.y = element_blank(),
+        #axis.title.x = element_blank(),
+        axis.title.x=element_text(size=8),
+        axis.text.y=element_text(size=8),
+        axis.text.x=element_text(size=8),
+        text = element_text(size=8),
+        legend.text = element_text(face = "italic"))+
+    scale_colour_manual(values=c("#b2182b","#4d4d4d"))
+  #geom_text()
+p1
+
+```
+
+<!-- ## Quantitative genetic analysis -->
+
+<!-- The experimental design does not allow to seperate the additive genetics effects from the effect of the plot. Given this limitation, we report report the proportion of additive genetic variance confounded by plot. This means that the estimates are likely inflated due to similarity of the microsite among the trees growing in family plots.  -->
+<!-- Using Asreml-R version 4 (Butler et al., 2017), two main statistical approaches were conducted. First, multi-environment analyses (MET) -->
+<!-- were conducted to obtain individual-tree narrow-sense heritability estimates (h2) and Type-B correlations (same trait across sites) based on the following model: -->
